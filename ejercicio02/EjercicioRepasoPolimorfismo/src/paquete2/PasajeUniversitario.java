@@ -17,7 +17,7 @@ public class PasajeUniversitario extends PasajeUrbano {
     
     @Override
     public void establecerValorPasaje(){
-        valorPasaje = valorFijo - (valorFijo * 0.30);
+        valorPasaje = valorFijo - (valorFijo * 0.05);
     }
     
     @Override

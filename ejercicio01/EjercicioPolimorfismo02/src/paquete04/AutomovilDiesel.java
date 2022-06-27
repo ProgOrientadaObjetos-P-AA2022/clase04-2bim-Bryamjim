@@ -5,10 +5,44 @@
  */
 package paquete04;
 
-/**
- *
- * @author reroes
- */
-public class AutomovilDiesel {
+import paquete02.Automovil;
+
+public class AutomovilDiesel extends Automovil{
+    double numLitros;
+    double costoLitros;
+    double descuentoLitros;
+    
+    public void establecerCostoLitro(double cl) {
+        costoLitros = cl;
+    }
+
+    public void setDescuentoLitros(double dl) {
+        descuentoLitros = dl*numLitros;
+    }
+
+     public void establecerNumLitros(double nl) {
+        numLitros = nl;
+    }
+    
+    public double obtenerDescuentoLitros() {
+        return descuentoLitros;
+    }
+
+    public double obtenerNumLitros() {
+        return numLitros;
+    }
+    
+    public double obtenerCostoLitro() {
+        return costoLitros;
+    }
+    
+    public double obtenerTotalCancelar(){
+        return valorCancelar;
+    }
+    
+    @Override
+    public void calcularValorCancelar(){
+        valorCancelar = costoLitros *(numLitros - descuentoLitros);
+    }
     
 }
